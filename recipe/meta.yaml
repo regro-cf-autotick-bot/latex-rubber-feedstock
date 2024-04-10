@@ -1,13 +1,13 @@
 {% set name = "latex-rubber" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/latex-rubber-{{ version }}.tar.gz
-  sha256: 47bbf8d6511f6d85f98baebbebb7cb1a58e9e6b1f92ff09fa6d8c08a683ea665
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0eb0cbe9eeaef6f654f3eaca0999893f15c307055811164072f558225823becb
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
